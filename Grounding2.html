@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		
+		// Grounding 2 Exercise 1/1
+
+		var dinosaurs = [];
+		dinosaurs[0] = "T-Rex";	             // add first element	
+		dinosaurs[1] = "Velociraptor";      // add 2nd element
+		dinosaurs[2] = "Stegosaurus";       // add 3th element
+		dinosaurs[5] = "Diplodocus";       // add 6th element!!!!!
+			
+		my(dinosaurs);
+
+
+	 	function my(x) {
+			for (var i = 0; i < x.length; i++) {
+				console.log(x[i]);
+			}
+		}
+
+		
+		// Grounding 2 Exercise 1/2
+
+			// diese Array wurde in mehrere Zeilen aufgeteilt - das ist völlig in Ordnung !!!
+
+		var amsterdam = [
+ 		3,                            // array can have numbers
+ 		"Amsterdam", "Netherland",    // array can have strings, here 2 in a single line
+  		[1500, 1200, 1400, "Euros"] // array can have arrays, that can also be complex
+		];
+
+		my (amsterdam);
+
+
+
+		// Grounding 2 Exercise 1/3
+
+		animals = ["Polar Bear", "Monkey", "Cat", "Dog", "Llama"]
+		var lastAnimal = animals.pop();
+		console.log(animals); // ["Polar Bear", "Monkey", "Cat", "Dog"]
+		var newLastAnimal = animals.pop();
+		console.log(animals); 
+		console.log(newLastAnimal);
+
+
+
+		// Grounding 2 Exercise 2a
+
+		var rndnum = (Math.random() * 10); //eine zufällige Zahl bis 10
+
+		console.log(rndnum);
+
+		if (rndnum > 5) {
+			console.log("die Nummer ist größer als 5");
+		}
+		else {
+			console.log("die Nummer ist kleiner als 5");
+		}
+
+
+
+		// Grounding 2 Exercise 2b
+
+		var date = new Date();
+
+		var hours = date.getHours();
+
+		console.log(hours);
+
+		function greeting () {
+
+			if (hours < 11 && hours >= 5) {
+				console.log("Good Morning");
+			}
+			else if (hours < 16 && hours > 11) {
+				console.log("Good Day");
+			}
+			else {
+				console.log("Good Night");
+			}
+		}
+
+		greeting()
+
+
+
+		// Grounding 2 Exercise 2c
+
+		var hero = "superman";
+
+		
+		function superhero (x) {
+			switch (x) {
+				case "superman":
+					console.log(x + " is a character of DC Comics");
+					break;
+				case "spiderman": 
+					console.log(x + " is a character of marvel");
+					break;
+				case "hulk":
+					console.log(x + " is a character of DC Comics");
+				default:
+					console.log("unknown");
+			}
+		}
+
+		superhero("superman");
+
+		superhero("spiderman");
+
+		superhero("hulk");
+
+		superhero("flash");
+
+
+
+
+		// Grounding 2 Exercise 3/1
+
+		function PeronInformation(age, name, job){
+			console.log("Hi I am " + name + " I am " + age + " and I am a future " + job);
+		}
+
+		PeronInformation(33,"Ying","Web Developer");
+
+
+
+
+		// Grounding 2 Exercise 3/2
+
+
+		function calc(a, b, c, d) {
+			var an = Number(a);
+			var bn = Number(b); 
+			var cn = Number(c); 
+			var dn = Number(d); 
+			console.log( an + bn + cn + dn);
+			console.log( an - bn - cn - dn);
+			console.log( an * bn * cn * dn);
+
+		}
+
+		calc(1, 3, 5,7 );
+
+
+
+		// Grounding 2 Exercise 3/3
+
+		var d = new Date();
+		var currentYear = d.getFullYear();
+
+		console.log(currentYear);
+
+		function ageCalc(birthyear) {
+			var result = currentYear - birthyear ; 
+			return result;
+		}
+
+		console.log(ageCalc(1984));
+
+
+	</script>
+</body>
+</html>
